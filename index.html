@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Setting up character encoding and responsive viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Keyboard for Kids - Presentation</title>
-    <!-- Including Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Linking external CSS file -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Main presentation container -->
     <div class="presentation-container">
-      <!-- Header with title and subtitle -->
       <div class="header">
         <h1>Digital Keyboard for Kids</h1>
         <p>An Interactive Learning Experience</p>
       </div>
 
-      <!-- Container for all slides with scrollbar -->
       <div class="slides-container">
         <!-- Slide 1: Title Slide -->
         <div class="slide active">
@@ -53,8 +47,6 @@
               the <span class="highlight">Date/Time</span> technique to create
               an engaging musical experience for young children.
             </p>
-
-            <!-- Grid of feature cards highlighting key aspects -->
             <div class="features-grid">
               <div class="feature">
                 <i class="fas fa-paint-brush"></i>
@@ -93,21 +85,18 @@
               The interface is designed with bright colors, simple shapes, and
               intuitive layout for young children.
             </p>
-
-            <!-- Placeholder for visual sketch -->
             <div class="sketch-container">
               <div class="sketch">
-                <p style="font-style: italic; color: #666">
-                  [Visual sketch showing keyboard layout with shape buttons,
-                  teaching section, and interactive drawing area]
-                </p>
+                <img
+                  src="protptypt-sketch.jpg"
+                  alt="Prototype sketch"
+                  class="sketch-img"
+                />
               </div>
             </div>
-
             <p>Key components include:</p>
             <ul>
               <li>Color-coded keyboard keys with shape icons</li>
-              <li>"Teach Me" button with visual cues</li>
               <li>Interactive drawing area for shape discovery</li>
               <li>Simple navigation with icon-based buttons</li>
             </ul>
@@ -122,8 +111,6 @@
               I drew inspiration from several successful children's educational
               apps and interfaces:
             </p>
-
-            <!-- Grid of reference cards with sources -->
             <div class="reference-grid">
               <div class="reference">
                 <h3>PBS Kids Games</h3>
@@ -153,7 +140,6 @@
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 20px">
               These references helped inform decisions about color palette,
               interaction design, and educational approach.
@@ -169,26 +155,19 @@
               Using <span class="highlight">Date.now()</span> to create
               time-based interactions and sequencing:
             </p>
-
             <ul>
               <li>Varying musical patterns based on time of day</li>
-              <li>
-                Sequencing the "teach me" functionality with appropriate timing
-                between notes
-              </li>
               <li>Creating daily variations to maintain engagement</li>
             </ul>
-
-            <!-- Placeholder for system architecture diagram -->
             <div class="sketch-container">
               <div class="sketch">
-                <p style="font-style: italic; color: #666">
-                  [System architecture diagram showing audio flow, user input
-                  processing, and time-based functions]
-                </p>
+                <img
+                  src="flowchart.png"
+                  alt="System architecture diagram"
+                  class="sketch-img"
+                />
               </div>
             </div>
-
             <p>
               Additional technical features include Web Audio API for sound
               generation, Canvas API for shape drawing, and touch event handling
@@ -205,19 +184,17 @@
               During Week 8 peer testing, I received valuable feedback from both
               children and parents:
             </p>
-
             <div class="feedback-item">
               <h3>Prompt 1: Discoverability of Features</h3>
               <p>
                 Users found the shape-drawing area intuitive but needed clearer
-                indication of the "teach me" functionality.
+                indication of interactive elements.
               </p>
               <p>
-                <strong>Response:</strong> Added a pulsing animation to the
-                "teach me" button to draw attention without using text.
+                <strong>Response:</strong> Added animations to interactive
+                buttons to draw attention without using text.
               </p>
             </div>
-
             <div class="feedback-item">
               <h3>Prompt 2: Audio Feedback Clarity</h3>
               <p>
@@ -240,7 +217,6 @@
               Based on user testing feedback, I implemented several
               improvements:
             </p>
-
             <ul>
               <li>Added parental control section for volume adjustment</li>
               <li>
@@ -251,16 +227,15 @@
               <li>Simplified color scheme to reduce visual overload</li>
               <li>Added more distinct auditory cues for different actions</li>
             </ul>
-
-            <!-- Placeholder for before/after comparison -->
             <div class="sketch-container">
               <div class="sketch">
-                <p style="font-style: italic; color: #666">
-                  [Before and after comparison of the interface]
-                </p>
+                <img
+                  src="protype-shapes.jpg"
+                  alt="Before and after comparison of the interface"
+                  class="sketch-img"
+                />
               </div>
             </div>
-
             <p>
               These changes significantly improved the user experience based on
               tester feedback.
@@ -276,11 +251,9 @@
               Experience the interactive digital keyboard designed for young
               learners:
             </p>
-
-            <!-- Link to live prototype (placeholder) -->
             <div style="text-align: center; margin: 30px 0">
               <a
-                href="#"
+                href="https://raniaprototype1.netlify.app"
                 style="
                   display: inline-block;
                   background: #4a6bff;
@@ -295,11 +268,9 @@
                 Try the Live Prototype
               </a>
             </div>
-
             <p>The prototype includes the core functionality:</p>
             <ul>
               <li>Playing musical notes with colorful keys</li>
-              <li>Learning songs with the "teach me" function</li>
               <li>Discovering shapes with audio feedback</li>
               <li>Time-based variations using Date.now()</li>
             </ul>
@@ -315,7 +286,6 @@
               characters" prompt using Date/Time techniques to create an
               engaging educational experience.
             </p>
-
             <p>Key achievements:</p>
             <ul>
               <li>Intuitive interface requiring no reading ability</li>
@@ -323,7 +293,6 @@
               <li>Effective use of Date.now() for varied experiences</li>
               <li>Positive feedback from user testing</li>
             </ul>
-
             <p>Future enhancements could include:</p>
             <ul>
               <li>Additional songs and learning activities</li>
@@ -335,7 +304,6 @@
         </div>
       </div>
 
-      <!-- Navigation controls for slides -->
       <div class="navigation">
         <button class="btn" id="prev-btn">
           <i class="fas fa-arrow-left"></i> Previous
@@ -350,7 +318,6 @@
       </div>
     </div>
 
-    <!-- Linking external JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>

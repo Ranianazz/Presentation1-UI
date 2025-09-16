@@ -141,11 +141,10 @@ body {
   margin: 2rem 0;
 }
 
-/* Sketch placeholder styling with subtle gradient */
+/* Sketch container styling with flexible height */
 .sketch {
   width: 100%;
   max-width: 700px;
-  height: 350px;
   background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
   border-radius: 1rem;
   margin: 0 auto;
@@ -153,6 +152,18 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Image styling to ensure proper scaling */
+.sketch img {
+  max-width: 100%;
+  max-height: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  display: block;
 }
 
 /* Grid layout for reference cards */
@@ -306,6 +317,10 @@ body {
   .slides-container {
     padding: 1.5rem;
   }
+
+  .sketch img {
+    max-height: 250px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -320,5 +335,9 @@ body {
 
   .slide-title {
     font-size: 1.5rem;
+  }
+
+  .sketch img {
+    max-height: 200px;
   }
 }
