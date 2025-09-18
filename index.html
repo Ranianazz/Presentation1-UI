@@ -1,323 +1,208 @@
 <!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<!-- Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html -->
 <html lang="en">
   <head>
+    <!-- Specifies the character encoding for the document -->
+    <!-- Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset -->
     <meta charset="UTF-8" />
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <!-- Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Keyboard for Kids - Presentation</title>
+    <!-- Sets the document title displayed in the browser tab -->
+    <title>Kids' Magic Song Maker - Presentation</title>
+    <!-- Links to Font Awesome CSS for icons used in the presentation -->
+    <!-- Source: https://fontawesome.com/docs/web/setup/get-started -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Links to an external stylesheet for custom styling -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Main container for the presentation content -->
     <div class="presentation-container">
+      <!-- Header section with title and description -->
       <div class="header">
-        <h1>Digital Keyboard for Kids</h1>
-        <p>An Interactive Learning Experience</p>
+        <!-- Main heading for the presentation -->
+        <h1>Kids' Magic Song Maker</h1>
+        <!-- Subtitle describing the project's purpose -->
+        <p>Interactive UI responding to the “No Text Characters” prompt</p>
       </div>
 
+      <!-- Container for all slides -->
       <div class="slides-container">
-        <!-- Slide 1: Title Slide -->
+        <!-- Slide 1: Welcome slide -->
         <div class="slide active">
-          <h2 class="slide-title">Digital Keyboard for Kids</h2>
+          <!-- Slide title -->
+          <h2 class="slide-title">Welcome</h2>
           <div class="slide-content">
-            <div style="text-align: center; margin: 30px 0">
+            <!-- Centered music icon using Font Awesome -->
+            <!-- Source: https://fontawesome.com/docs/web/use-with/html -->
+            <p style="text-align: center; font-size: 1.3rem">
               <i
                 class="fas fa-music"
-                style="font-size: 4rem; color: #4a6bff"
+                style="font-size: 3rem; color: #4a6bff"
               ></i>
-            </div>
-            <p
-              style="text-align: center; font-size: 1.5rem; margin-bottom: 20px"
-            >
-              An interactive educational UI designed for young learners
             </p>
-            <p style="text-align: center">Created by Rania Nazzal</p>
+            <!-- Author and project description -->
+            <p style="text-align: center; margin-top: 1rem">
+              Created by <strong>Rania Nazzal</strong><br />
+              An interactive prototype blending
+              <em>shapes, colour and sound</em>.
+            </p>
           </div>
         </div>
 
         <!-- Slide 2: Conceptual Response -->
         <div class="slide">
+          <!-- Slide title -->
           <h2 class="slide-title">Conceptual Response</h2>
           <div class="slide-content">
+            <!-- Description of the project's response to the prompt -->
             <p>
-              My design responds to the
-              <span class="highlight">"No text characters"</span> prompt using
-              the <span class="highlight">Date/Time</span> technique to create
-              an engaging musical experience for young children.
+              This project responds to the
+              <span class="highlight">“No text characters”</span> prompt. The
+              interface communicates only through
+              <strong>shapes, colours, and sounds</strong>.
             </p>
-            <div class="features-grid">
-              <div class="feature">
-                <i class="fas fa-paint-brush"></i>
-                <h3>Visual Design</h3>
-                <p>
-                  Colorful, intuitive interface with shapes and icons instead of
-                  text
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-music"></i>
-                <h3>Auditory Feedback</h3>
-                <p>Sounds and music guide interaction and learning</p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-child"></i>
-                <h3>Age Appropriate</h3>
-                <p>Designed for children ages 2-5 who cannot yet read</p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Educational Value</h3>
-                <p>
-                  Develops motor skills, auditory recognition, and creativity
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3: Visual Plan -->
-        <div class="slide">
-          <h2 class="slide-title">Visual Plan & Sketch</h2>
-          <div class="slide-content">
-            <p>
-              The interface is designed with bright colors, simple shapes, and
-              intuitive layout for young children.
-            </p>
-            <div class="sketch-container">
-              <div class="sketch">
-                <img
-                  src="protptypt-sketch.jpg"
-                  alt="Prototype sketch"
-                  class="sketch-img"
-                />
-              </div>
-            </div>
-            <p>Key components include:</p>
+            <!-- List of key conceptual points -->
             <ul>
-              <li>Color-coded keyboard keys with shape icons</li>
-              <li>Interactive drawing area for shape discovery</li>
-              <li>Simple navigation with icon-based buttons</li>
+              <li>Inspired by playful children’s toys and music boxes</li>
+              <li>Designed for ages 2–5 who cannot yet read</li>
+              <li>
+                Focuses on <em>fun, creativity, and sensory engagement</em>
+              </li>
             </ul>
           </div>
         </div>
 
-        <!-- Slide 4: Design References -->
+        <!-- Slide 3: Technical Approach -->
         <div class="slide">
-          <h2 class="slide-title">Design References</h2>
-          <div class="slide-content">
-            <p>
-              I drew inspiration from several successful children's educational
-              apps and interfaces:
-            </p>
-            <div class="reference-grid">
-              <div class="reference">
-                <h3>PBS Kids Games</h3>
-                <p>Bright colors, simple shapes, and clear auditory feedback</p>
-                <p>
-                  <a href="https://pbskids.org/games" target="_blank"
-                    >PBS Kids Games</a
-                  >
-                </p>
-              </div>
-              <div class="reference">
-                <h3>ABCmouse</h3>
-                <p>Age-appropriate activities with engaging visuals</p>
-                <p>
-                  <a href="https://www.abcmouse.com" target="_blank"
-                    >ABCmouse</a
-                  >
-                </p>
-              </div>
-              <div class="reference">
-                <h3>Khan Academy Kids</h3>
-                <p>Intuitive navigation without reliance on text</p>
-                <p>
-                  <a href="https://www.khanacademy.org/kids" target="_blank"
-                    >Khan Academy Kids</a
-                  >
-                </p>
-              </div>
-            </div>
-            <p style="margin-top: 20px">
-              These references helped inform decisions about color palette,
-              interaction design, and educational approach.
-            </p>
-          </div>
-        </div>
-
-        <!-- Slide 5: Technical Approach -->
-        <div class="slide">
+          <!-- Slide title -->
           <h2 class="slide-title">Technical Approach</h2>
           <div class="slide-content">
+            <!-- Description of technologies used -->
             <p>
-              Using <span class="highlight">Date.now()</span> to create
-              time-based interactions and sequencing:
+              Built with <span class="highlight">p5.js</span> and
+              <span class="highlight">p5.sound</span>.
             </p>
+            <!-- List of technical implementation details -->
             <ul>
-              <li>Varying musical patterns based on time of day</li>
-              <li>Creating daily variations to maintain engagement</li>
-            </ul>
-            <div class="sketch-container">
-              <div class="sketch">
-                <img
-                  src="flowchart.png"
-                  alt="System architecture diagram"
-                  class="sketch-img"
-                />
-              </div>
-            </div>
-            <p>
-              Additional technical features include Web Audio API for sound
-              generation, Canvas API for shape drawing, and touch event handling
-              for mobile compatibility.
-            </p>
-          </div>
-        </div>
-
-        <!-- Slide 6: User Testing -->
-        <div class="slide">
-          <h2 class="slide-title">User Testing Feedback</h2>
-          <div class="slide-content">
-            <p>
-              During Week 8 peer testing, I received valuable feedback from both
-              children and parents:
-            </p>
-            <div class="feedback-item">
-              <h3>Prompt 1: Discoverability of Features</h3>
-              <p>
-                Users found the shape-drawing area intuitive but needed clearer
-                indication of interactive elements.
-              </p>
-              <p>
-                <strong>Response:</strong> Added animations to interactive
-                buttons to draw attention without using text.
-              </p>
-            </div>
-            <div class="feedback-item">
-              <h3>Prompt 2: Audio Feedback Clarity</h3>
-              <p>
-                Testers suggested adding more distinct sounds for different
-                actions to improve feedback.
-              </p>
-              <p>
-                <strong>Response:</strong> Implemented unique sound signatures
-                for shapes, notes, and navigation elements.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 7: Response to Feedback -->
-        <div class="slide">
-          <h2 class="slide-title">Response to Feedback</h2>
-          <div class="slide-content">
-            <p>
-              Based on user testing feedback, I implemented several
-              improvements:
-            </p>
-            <ul>
-              <li>Added parental control section for volume adjustment</li>
+              <li>Click/tap → generates <strong>shape + note</strong></li>
               <li>
-                Implemented a cooldown period between shape sounds to prevent
-                audio chaos
+                Notes follow a <em>pentatonic scale</em> & “Twinkle Twinkle”
+                sequence
               </li>
-              <li>Enhanced visual feedback when buttons are pressed</li>
-              <li>Simplified color scheme to reduce visual overload</li>
-              <li>Added more distinct auditory cues for different actions</li>
+              <li>Shapes expand & fade for visual feedback</li>
+              <li>
+                Randomness (<code>Math.random()</code>) adds variation in size,
+                colour & duration
+              </li>
             </ul>
-            <div class="sketch-container">
-              <div class="sketch">
-                <img
-                  src="protype-shapes.jpg"
-                  alt="Before and after comparison of the interface"
-                  class="sketch-img"
-                />
-              </div>
-            </div>
-            <p>
-              These changes significantly improved the user experience based on
-              tester feedback.
-            </p>
+            <!-- System map image placeholder -->
+            <p style="margin-top: 1rem">System Map:</p>
+            <!-- Image element for system map, with alt text for accessibility -->
+            <!-- Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img -->
+            <img src="flowchart-map.png" alt="System Map" class="sketch-img" />
           </div>
         </div>
 
-        <!-- Slide 8: Live Prototype -->
+        <!-- Slide 4: Peer Testing Feedback -->
         <div class="slide">
+          <!-- Slide title -->
+          <h2 class="slide-title">Peer Testing Feedback</h2>
+          <div class="slide-content">
+            <!-- Feedback item 1 -->
+            <div class="feedback-item">
+              <h3>Prompt 1: Intuitive Mapping</h3>
+              <p>
+                Peers found clicking to make sound intuitive:
+                <em>“Simple, fun, and effective!”</em>
+              </p>
+            </div>
+            <!-- Feedback item 2 -->
+            <div class="feedback-item">
+              <h3>Prompt 2: Cohesion</h3>
+              <p>
+                Playful visuals + melody worked well, but some colours clashed.
+                Suggestions included smoother fade-outs & clearer pitch mapping.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5: Response & Next Steps -->
+        <div class="slide">
+          <!-- Slide title -->
+          <h2 class="slide-title">Response & Next Steps</h2>
+          <div class="slide-content">
+            <!-- List of planned improvements -->
+            <ul>
+              <li>Refine colour palette for consistency</li>
+              <li>Add more shapes and smoother dissolves</li>
+              <li>Map click position to pitch (left = low, right = high)</li>
+              <li>
+                Introduce simple <em>user choice</em> (toggle melodies/shapes)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 6: Live Prototype -->
+        <div class="slide">
+          <!-- Slide title -->
           <h2 class="slide-title">Live Prototype</h2>
-          <div class="slide-content">
-            <p>
-              Experience the interactive digital keyboard designed for young
-              learners:
-            </p>
-            <div style="text-align: center; margin: 30px 0">
-              <a
-                href="https://raniaprototype1.netlify.app"
-                style="
-                  display: inline-block;
-                  background: #4a6bff;
-                  color: white;
-                  padding: 15px 30px;
-                  border-radius: 50px;
-                  text-decoration: none;
-                  font-weight: bold;
-                  font-size: 1.2rem;
-                "
-              >
-                Try the Live Prototype
-              </a>
-            </div>
-            <p>The prototype includes the core functionality:</p>
-            <ul>
-              <li>Playing musical notes with colorful keys</li>
-              <li>Discovering shapes with audio feedback</li>
-              <li>Time-based variations using Date.now()</li>
-            </ul>
+          <div class="slide-content" style="text-align: center">
+            <!-- Link to the live prototype -->
+            <p>Click below to try it:</p>
+            <!-- Anchor tag for external link, opens in new tab -->
+            <!-- Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a -->
+            <a
+              href="https://raniaprototype1.netlify.app"
+              class="btn primary-btn"
+              target="_blank"
+              >Try the Prototype</a
+            >
           </div>
         </div>
 
-        <!-- Slide 9: Conclusion -->
+        <!-- Slide 7: Conclusion -->
         <div class="slide">
-          <h2 class="slide-title">Conclusion & Next Steps</h2>
+          <!-- Slide title -->
+          <h2 class="slide-title">Conclusion</h2>
           <div class="slide-content">
+            <!-- Summary of project outcomes -->
             <p>
-              The Digital Keyboard for Kids successfully addresses the "No text
-              characters" prompt using Date/Time techniques to create an
-              engaging educational experience.
+              The prototype successfully demonstrates a
+              <strong>text-free, sensory-based interface</strong>. Through
+              testing and refinement, it shows potential for
+              <em>education, creativity, and accessibility</em>.
             </p>
-            <p>Key achievements:</p>
-            <ul>
-              <li>Intuitive interface requiring no reading ability</li>
-              <li>Educational value through music and shape recognition</li>
-              <li>Effective use of Date.now() for varied experiences</li>
-              <li>Positive feedback from user testing</li>
-            </ul>
-            <p>Future enhancements could include:</p>
-            <ul>
-              <li>Additional songs and learning activities</li>
-              <li>Customization options for parents</li>
-              <li>Progress tracking for skill development</li>
-              <li>Adaptation for children with special needs</li>
-            </ul>
           </div>
         </div>
       </div>
 
+      <!-- Navigation controls for slides -->
       <div class="navigation">
+        <!-- Previous slide button with Font Awesome icon -->
         <button class="btn" id="prev-btn">
           <i class="fas fa-arrow-left"></i> Previous
         </button>
+        <!-- Slide counter display -->
         <div class="slide-counter">
           Slide <span id="current-slide">1</span> of
-          <span id="total-slides">9</span>
+          <span id="total-slides">7</span>
         </div>
+        <!-- Next slide button with Font Awesome icon -->
         <button class="btn" id="next-btn">
           Next <i class="fas fa-arrow-right"></i>
         </button>
       </div>
     </div>
 
+    <!-- External JavaScript file for slide navigation logic -->
     <script src="script.js"></script>
   </body>
 </html>

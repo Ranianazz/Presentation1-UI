@@ -1,343 +1,192 @@
-/* Reset default styles for consistent rendering across browsers */
+/* 
+  Styles for Kids' Magic Song Maker Presentation
+  Written by Rania Nazzal
+  Sources consulted:
+  - CSS Tricks (https://css-tricks.com)
+  - MDN Web Docs (https://developer.mozilla.org/)
+*/
+
+/* Reset default margins, padding, and set box-sizing to border-box for consistent layout */
+/* Source: https://css-tricks.com/box-sizing/ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Arial, sans-serif;
+  font-family: "Inter", sans-serif; /* Applies Inter font globally */
 }
 
-/* Styling the body with a subtle gradient background and centered content */
+/* Styles the body with a pastel gradient background and centers content */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/background */
 body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
-  color: #1a202c;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    #fdfbfb 0%,
+    #ebedee 100%
+  ); /* Soft pastel gradient */
+  color: #2d3748; /* Dark gray text color */
+  min-height: 100vh; /* Ensures body takes at least full viewport height */
+  display: flex; /* Uses flexbox for centering */
+  justify-content: center; /* Horizontally centers content */
+  align-items: center; /* Vertically centers content */
+  padding: 2rem; /* Adds padding around the body */
 }
 
-/* Main container for the presentation with shadow and rounded corners */
+/* Styles the main presentation container with a max-width and subtle shadow */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 .presentation-container {
-  width: 100%;
-  max-width: 1280px;
-  background: #ffffff;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  max-width: 1100px; /* Limits container width */
+  width: 100%; /* Ensures responsiveness */
+  background: #ffffff; /* White background */
+  border-radius: 1.5rem; /* Rounded corners */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  overflow: hidden; /* Prevents content from overflowing rounded corners */
 }
 
-/* Header styling with a modern gradient and refined typography */
+/* Styles the header with a gradient background and centered text */
+/* Source: https://css-tricks.com/snippets/css/gradient-backgrounds/ */
 .header {
-  background: linear-gradient(90deg, #2b6cb0 0%, #4c51bf 100%);
-  color: #ffffff;
-  padding: 2.5rem;
-  text-align: center;
-  position: relative;
+  background: linear-gradient(
+    90deg,
+    #667eea 0%,
+    #764ba2 100%
+  ); /* Gradient from blue to purple */
+  color: #fff; /* White text */
+  padding: 2rem; /* Inner padding */
+  text-align: center; /* Centers text */
 }
 
+/* Styles the header's main title */
 .header h1 {
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.025em;
+  font-size: 2.5rem; /* Large font size for prominence */
+  margin-bottom: 0.5rem; /* Space below the title */
 }
 
+/* Styles the header's subtitle with slight opacity */
 .header p {
-  font-size: 1.25rem;
-  font-weight: 400;
-  opacity: 0.85;
+  font-size: 1.25rem; /* Smaller than title but still prominent */
+  opacity: 0.9; /* Slightly transparent for visual hierarchy */
 }
 
-/* Container for all slides without fixed height to avoid double scrolling */
+/* Styles the container for slides */
 .slides-container {
-  padding: 3rem;
-  position: relative;
+  padding: 2rem 3rem; /* Adds padding inside the container */
 }
 
-/* Individual slide styling with smooth fade-in animation */
+/* Hides slides by default */
 .slide {
-  display: none;
-  animation: fadeIn 0.6s ease-in-out;
-  padding: 2rem;
+  display: none; /* Hidden until activated */
+  animation: fadeIn 0.5s ease-in-out; /* Applies fade-in animation on display */
 }
 
+/* Shows active slide */
 .slide.active {
-  display: block;
+  display: block; /* Makes the active slide visible */
 }
 
-/* Slide title styling with refined typography and accent border */
+/* Styles the slide title with a decorative bottom border */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom */
 .slide-title {
-  color: #2d3748;
-  font-size: 2.25rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  text-align: center;
-  border-bottom: 2px solid #4a6bff;
-  padding-bottom: 1rem;
-  letter-spacing: -0.02em;
+  font-size: 2rem; /* Large font for emphasis */
+  color: #2d3748; /* Dark gray color */
+  text-align: center; /* Centers the title */
+  margin-bottom: 1.5rem; /* Space below the title */
+  border-bottom: 2px solid #667eea; /* Blue underline */
+  padding-bottom: 0.5rem; /* Space between text and underline */
 }
 
-/* Slide content styling for improved readability */
+/* Styles the slide content with readable line height */
 .slide-content {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
-  color: #4a5568;
+  font-size: 1.1rem; /* Slightly larger than default text */
+  line-height: 1.6; /* Improves readability */
 }
 
+/* Styles unordered lists within slide content */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
 .slide-content ul {
-  padding-left: 2rem;
-  margin: 1.25rem 0;
+  margin: 1rem 0; /* Vertical spacing */
+  padding-left: 1.5rem; /* Indents list items */
 }
 
+/* Styles list items */
 .slide-content li {
-  margin-bottom: 0.75rem;
-  position: relative;
+  margin-bottom: 0.5rem; /* Space between list items */
+  list-style-type: disc; /* Uses disc bullets */
 }
 
-.slide-content li::before {
-  content: "•";
-  color: #4a6bff;
-  position: absolute;
-  left: -1rem;
+/* Styles images (e.g., system map) with centering and shadow */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+.sketch-img {
+  display: block; /* Ensures image is block-level for centering */
+  margin: 1.5rem auto; /* Centers image with vertical spacing */
+  max-width: 600px; /* Limits image width */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Grid layout for feature cards with modern styling */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+/* Styles feedback cards with a light background and accent border */
+.feedback-item {
+  background: #f7fafc; /* Light gray background */
+  padding: 1rem 1.5rem; /* Inner padding */
+  border-radius: 1rem; /* Rounded corners */
+  margin-bottom: 1rem; /* Space between feedback items */
+  border-left: 4px solid #667eea; /* Blue left border for emphasis */
 }
 
-/* Feature card styling without button-like hover effect */
-.feature {
-  background: #f7fafc;
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.feature i {
-  font-size: 2.25rem;
-  color: #4a6bff;
-  margin-bottom: 1rem;
-}
-
-.feature h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2d3748;
-  margin-bottom: 0.75rem;
-}
-
-/* Container for sketch placeholders with centered layout */
-.sketch-container {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-/* Sketch container styling with flexible height */
-.sketch {
-  width: 100%;
-  max-width: 700px;
-  background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
-  border-radius: 1rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-/* Image styling to ensure proper scaling */
-.sketch img {
-  max-width: 100%;
-  max-height: 350px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 0.5rem;
-  display: block;
-}
-
-/* Grid layout for reference cards */
-.reference-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-/* Reference card styling without button-like hover effect */
-.reference {
-  background: #f7fafc;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.reference h3 {
-  color: #2d3748;
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-.reference a {
-  color: #4a6bff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.reference a:hover {
-  text-decoration: underline;
-}
-
-/* Navigation bar styling with clean layout */
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  background: #f7fafc;
-}
-
-/* Button styling for navigation with gradient and hover animation */
+/* Styles buttons with a blue background and hover effect */
+/* Source: https://css-tricks.com/snippets/css/css-button-styling/ */
 .btn {
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(90deg, #4a6bff 0%, #2b6cb0 100%);
-  color: #ffffff;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
+  padding: 0.75rem 1.25rem; /* Comfortable padding */
+  background: #667eea; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Removes default border */
+  border-radius: 2rem; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  font-weight: 600; /* Bold text */
+  display: inline-flex; /* Flexbox for icon/text alignment */
+  align-items: center; /* Vertically aligns content */
+  gap: 0.5rem; /* Space between icon and text */
+  transition: 0.3s; /* Smooth transition for hover effects */
 }
 
+/* Changes button background on hover */
 .btn:hover {
-  background: linear-gradient(90deg, #2b6cb0 0%, #4a6bff 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background: #764ba2; /* Purple background on hover */
 }
 
-.btn i {
-  font-size: 1rem;
+/* Styles primary buttons (e.g., prototype link) with centered text */
+.primary-btn {
+  font-size: 1.1rem; /* Slightly larger text */
+  margin-top: 1rem; /* Space above */
+  text-decoration: none; /* Removes underline for links */
+  justify-content: center; /* Centers content horizontally */
 }
 
-/* Slide counter styling with bold typography */
+/* Styles the navigation bar with a light background */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/display#flex */
+.navigation {
+  background: #f7fafc; /* Light gray background */
+  padding: 1rem 2rem; /* Inner padding */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Spaces out buttons and counter */
+  align-items: center; /* Vertically aligns content */
+}
+
+/* Styles the slide counter text */
 .slide-counter {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  color: #2d3748;
-  font-size: 1rem;
+  font-size: 1rem; /* Standard text size */
+  font-weight: 500; /* Medium bold */
+  color: #4a5568; /* Medium gray color */
 }
 
-/* Styling for keyboard image placeholder */
-.keyboard-img {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Fade-in animation for slides */
+/* Defines the fade-in animation for slides */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(10px);
+    opacity: 0; /* Starts invisible */
+    transform: translateY(15px); /* Starts slightly below */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Highlighted text styling with subtle contrast */
-.highlight {
-  background: #4a6bff;
-  color: #ffffff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-weight: 500;
-}
-
-/* Feedback item styling with clean design */
-.feedback-item {
-  background: #f7fafc;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.feedback-item h3 {
-  color: #2d3748;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .features-grid,
-  .reference-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .slide-title {
-    font-size: 1.75rem;
-  }
-
-  .slide-content {
-    font-size: 1rem;
-  }
-
-  .header h1 {
-    font-size: 2rem;
-  }
-
-  .header p {
-    font-size: 1rem;
-  }
-
-  .slides-container {
-    padding: 1.5rem;
-  }
-
-  .sketch img {
-    max-height: 250px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 1rem;
-  }
-
-  .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-  }
-
-  .slide-title {
-    font-size: 1.5rem;
-  }
-
-  .sketch img {
-    max-height: 200px;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to original position */
   }
 }
